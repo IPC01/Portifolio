@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio | UI & UX Designer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="tsparticles"> </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <div class="logo">IVÂNIA<span style="color:#ff8c42">.</span></div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">Sobre mim</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#projects">Projectos</a></li>
+                <li><a href="#resume">Resumo</a></li>
+                <!-- <li><a href="#testimonials">Depoimentos</a></li> -->
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+            <button class="btn-cv" id="downloadBtn" onclick="baixarCV()">Baixar CV</button>
+        </div>
+    </header>
+    <!-- Barra de Progresso de Rolagem -->
+    <div id="scrollProgressBar"></div>
+
+    <!-- Hero -->
+    <section class="container hero">
+        <div class="hero-info">
+            <h2>Olá, Eu sou <span style="color:#ff8c42">Ivânia Perce Chirindza</span></h2>
+            <h1>Estudante de Licenciatura em Informática</h1>
+            <p><span id="typed-hero"></span></p>
+
+            <button class="btn-hire">Me Contrate</button>
+        </div>
+        <div class="hero-img">
+            <img src="ivania.jpg" alt="Foto de Perfil" />
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="container">
+        <div class="section-title">
+            <h2>Sobre Mim</h2>
+            <p>Conheça minha trajetória, paixões e competências profissionais</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-info">
+                <p><span id="typed-about"></span></p>
+
+
+                <ul class="about-details">
+                    <li><i class="fas fa-graduation-cap"></i><strong>Formação:</strong> Licenciatura em Informática na
+                        Universidade Eduardo Mondlane (conclusão prevista: 2025)</li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <strong>Email:</strong>
+                        <a href="mailto:ivaniapercechirindza@email.com">
+                            ivaniapercechirindza@email.com
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <i class="fas fa-phone"></i>
+                        <strong>Telefone:</strong>
+                        <a href="tel:+258833858115">+258 83 385 8115</a>
+                    </li> -->
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <strong>Telefone:</strong>
+                        <a href="tel:+258874870677">+258 87 487 0677</a>
+                    </li>
+                </ul>
+
+                <div class="about-buttons">
+                    <button class="btn-contact">Contacte-me</button>
+                    <button class="btn-cv" id="downloadBtn" onclick="baixarCV()">Baixar CV</button>
+                </div>
+            </div>
+
+            <div class="about-img">
+                <img src="ivania.jpg" alt="Foto de Ivânia Perce Chirindza" />
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services -->
+    <!-- Services -->
+    <section id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Serviços</h2>
+                <p>Áreas de actuação e competências profissionais</p>
+            </div>
+            <div class="services-grid" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+                <div class="service-card animate-down"
+                    style="flex: 1 1 250px; max-width: 300px; padding: 1.5rem; border-radius: 12px; box-shadow: 0 6px 18px rgba(239, 165, 55, 0.371); text-align: center; background-color: #f9f9f9;  color: rgb(95, 63, 4)">
+                    <div class="icon" style="font-size: 2.5rem; color: #ff8c42; margin-bottom: 1rem;">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Desenvolvedora</h3>
+                    <p style="color: rgb(100, 99, 99);">Criação e manutenção de sistemas e aplicações eficientes.</p>
+                </div>
+
+                <div class="service-card animate-up"
+                    style="flex: 1 1 250px; max-width: 300px; padding: 1.5rem; border-radius: 12px; box-shadow: 0 6px 18px rgba(239, 165, 55, 0.371); text-align: center; background-color: #f9f9f9; color: rgb(95, 63, 4);">
+                    <div class="icon" style="font-size: 2.5rem; color: #ff8c42; margin-bottom: 1rem;">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Professora</h3>
+                    <p style="color: rgb(100, 99, 99);">Actuação em ensino e monitoria para formação de novos talentos.
+                    </p>
+                </div>
+
+                <div class="service-card animate-down"
+                    style="flex: 1 1 250px; max-width: 300px; padding: 1.5rem; border-radius: 12px; box-shadow:  0 6px 18px rgba(239, 165, 55, 0.371);text-align: center; background-color: #f9f9f9;  color: rgb(95, 63, 4)">
+                    <div class="icon" style="font-size: 2.5rem; color: #ff8c42; margin-bottom: 1rem;">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Consultoria em Análise e Desenho de Sistemas</h3>
+                    <p style="color: rgb(100, 99, 99);">Orientação técnica para projectos e modelagem de sistemas.</p>
+                </div>
+
+                <div class="service-card animate-up"
+                    style="flex: 1 1 250px; max-width: 300px; padding: 1.5rem; border-radius: 12px; box-shadow:  0 6px 18px rgba(239, 165, 55, 0.371);text-align: center; background-color: #f9f9f9;  color: rgb(95, 63, 4)">
+                    <div class="icon" style="font-size: 2.5rem; color: #ff8c42; margin-bottom: 1rem;">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Administração de BD</h3>
+                    <p style="color: rgb(100, 99, 99);">Conhecimentos básicos para gerenciar bases de dados.</p>
+                </div>
+
+                <div class="service-card animate-down"
+                    style="flex: 1 1 250px; max-width: 300px; padding: 1.5rem; border-radius: 12px; box-shadow:  0 6px 18px rgba(239, 165, 55, 0.371);text-align: center; background-color: #f9f9f9;  color: rgb(95, 63, 4)">
+                    <div class="icon" style="font-size: 2.5rem; color: #ff8c42; margin-bottom: 1rem;">
+                        <i class="fas fa-vials"></i>
+                    </div>
+                    <h3>Testadora de Sistemas</h3>
+                    <p style="color: rgb(100, 99, 99);">Realização de testes para garantir qualidade e eficiência.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="observer">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meus Projectos</h2>
+                <p>Uma seleção dos meus trabalhos mais recentes e impactantes</p>
+            </div>
+            <div class="filter-buttons">
+                <button class="active" data-filter="all">All</button>
+                <button data-filter="web">Web Development</button>
+                <button data-filter="app">App Development</button>
+
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="web">
+                    <img src="sga.jpg"
+                        alt="Project 1">
+                    <div class="info">
+                        <span>SGA</span>
+                        <h3>Sistema De Gestão De Actividades</h3>
+                    </div>
+                </div>
+                <div class="project-card" data-category="web">
+                    <img src="eventconnect2.png"
+                        alt="Project 2">
+                    <div class="info">
+                        <span>Event Connect</span>
+                        <h3>Sistema De Busca e Reserva De Salões De Eventos</h3>
+                    </div>
+                </div>
+                <div class="project-card" data-category="app">
+                    <img src="singularity.png"
+                        alt="Project 3">
+                    <div class="info">
+                        <span>Singularity</span>
+                        <h3>Sistema De Gestão e Busca De Vagas De Emprego</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume -->
+    <section id="resume" class="rn-resume-area">
+        <div class="container">
+            <div class="section-title">
+                <span class="subtitle">2+ Anos de Experiência</span>
+                <h2 class="title">Meu Resumo</h2>
+            </div>
+            <div class="row mt--45">
+                <div class="col-lg-12">
+                    <ul class="rn-nav-list" id="myTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="education-tab" href="#!" role="tab"
+                                data-target="#education">Educação</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="professional-tab" href="#!" role="tab"
+                                data-target="#professional">Habilidades Profissionais</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="experience-tab" href="#!" role="tab"
+                                data-target="#experience">Experiências</a>
+                        </li>
+                    </ul>
+                    <div class="rn-nav-content tab-content" id="myTabContents">
+                        <!-- Educação -->
+                        <div class="tab-pane show active fade single-tab-area" id="education" role="tabpanel">
+                            <div class="personal-experience-inner mt--40">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="content">
+                                            <div class="experience-list">
+                                                <div class="resume-single-list">
+                                                    <div class="inner">
+                                                        <div class="heading">
+                                                            <div class="title">
+                                                                <h4>Licenciatura em Informática</h4>
+                                                                <span>Universidade Eduardo Mondlane – Maputo, Moçambique
+                                                                    (Conclusão prevista: 2025)</span>
+                                                            </div>
+                                                        </div>
+                                                        <p>Estudante finalista da Licenciatura em Informática com
+                                                            formação em desenvolvimento de software, banco de dados e
+                                                            engenharia de sistemas.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Habilidades Profissionais -->
+                        <!-- Habilidades Profissionais -->
+                        <!-- Habilidades Profissionais -->
+                        <div class="tab-pane fade" id="professional" role="tabpanel">
+                            <div class="personal-experience-inner mt--40">
+                                <div class="row row--40">
+
+                                    <!-- Competências Técnicas com Radar Chart -->
+                                    <!-- Competências Técnicas com Radar Chart corrigido -->
+                                    <div class="col-lg-6 col-md-6 col-12">
+                                        <div class="progress-wrapper">
+                                            <div class="content"
+                                                style="height: 520px; max-height: 520px; overflow: hidden;">
+                                                <h4 class="maintitle">Competências Técnicas</h4>
+                                                <canvas id="skillsRadar" style="width: 100%; height: 100%;"></canvas>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Outros conhecimentos e interesses em lista simples -->
+                                    <!-- Outros Conhecimentos com Barras Animadas e Ícones 
+<div class="progress-wrapper">
+  <div class="content">
+    <h4 class="maintitle">Outros Conhecimentos</h4>
+
+    <div class="custom-skill-bar">
+      <div class="skill-icon"><i class="fas fa-brain"></i></div>
+      <div class="skill-info">
+        <span>IA Integrada</span>
+        <div class="animated-bar"><div class="bar-fill" style="width: 20%;"></div></div>
+      </div>
+    </div>
+
+    <div class="custom-skill-bar">
+      <div class="skill-icon"><i class="fab fa-git-alt"></i></div>
+      <div class="skill-info">
+        <span>Git</span>
+        <div class="animated-bar"><div class="bar-fill" style="width: 85%;"></div></div>
+      </div>
+    </div>
+
+    <div class="custom-skill-bar">
+      <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+      <div class="skill-info">
+        <span>APIs REST</span>
+        <div class="animated-bar"><div class="bar-fill" style="width: 80%;"></div></div>
+      </div>
+    </div>
+
+    <div class="custom-skill-bar">
+      <div class="skill-icon"><i class="fab fa-windows"></i></div>
+      <div class="skill-info">
+        <span>Windows OS</span>
+        <div class="animated-bar"><div class="bar-fill" style="width: 75%;"></div></div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Experiências -->
+                        <div class="tab-pane fade" id="experience" role="tabpanel">
+                            <div class="personal-experience-inner mt--40">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="content">
+                                            <div class="experience-list">
+                                                <div class="resume-single-list">
+                                                    <div class="inner">
+                                                        <div class="heading">
+                                                            <div class="title">
+                                                                <h4>Estagiária em Desenvolvimento Web</h4>
+                                                                <span>Explicador Inc — Maputo, Moçambique (Julho 2024 –
+                                                                    Presente)</span>
+                                                            </div>
+                                                        </div>
+                                                        <ul>
+                                                            <li>Desenvolvimento de aplicações web com Laravel</li>
+                                                            <li>Apoio em tarefas de backend utilizando PHP e Node.js
+                                                            </li>
+                                                            <li>Apoio na modelagem e administração de bases de dados
+                                                                relacionais</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="resume-single-list">
+                                                    <div class="inner">
+                                                        <div class="heading">
+                                                            <div class="title">
+                                                                <h4>Monitora Universitária – Disciplina de TCI</h4>
+                                                                <span>Faculdade de Geologia (2025 – Presente)</span>
+                                                            </div>
+                                                        </div>
+                                                        <ul>
+                                                            <li>Apoio pedagógico a estudantes do curso de Informática
+                                                            </li>
+                                                            <li>Elaboração e correção de exercícios e actividades
+                                                                práticas</li>
+                                                            <li>Suporte técnico em aulas teóricas e laboratoriais</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="container">
+        <div class="section-title">
+            <h2>Planos de Serviços</h2>
+            <p>Soluções personalizadas para cada necessidade do seu negócio</p>
+        </div>
+        <ul class="pricing-tabs" id="myTab">
+            <li><a href="#" class="active" data-tab="mkt">Análise Sistemas</a></li>
+            <li><a href="#" data-tab="dev">Dev</a></li>
+            <li><a href="#" data-tab="design">Gestão de BD</a></li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+            <div id="mkt" class="tab-pane active">
+                <div class="rn-pricing">
+                    <h2>Consultoria de Sistemas</h2>
+                    <p>
+                        Auxílio estratégico na análise, estruturação e melhoria de sistemas informáticos.
+                        Ofereço suporte desde o levantamento de requisitos até o desenho funcional e técnico, garantindo
+                        que as soluções estejam alinhadas com os objetivos do seu negócio.
+                    </p>
+                </div>
+            </div>
+            <div id="dev" class="tab-pane">
+                <div class="rn-pricing">
+                    <h2>Desenvolvimento de Sistemas</h2>
+                    <p>
+                        Criação de aplicações modernas, eficientes e escaláveis para web ou dispositivos móveis.
+                        Desde sites institucionais até sistemas personalizados de gestão, utilizo tecnologias como
+                        Laravel, React, Vue.js, Node.js e muito mais para entregar soluções funcionais e intuitivas.
+                    </p>
+                </div>
+                <div id="design" class="tab-pane">
+                    <div class="rn-pricing">
+                        <h2>Administração de BD</h2>
+                        <p>
+                            Gestão eficiente de bancos de dados relacionais (MySQL, Oracle) com foco em integridade,
+                            segurança e performance.
+                            Realizo modelagem, manutenção, backups, consultas otimizadas e boas práticas para garantir a
+                            estabilidade das suas informações.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Testimonials -->
+    <!-- <section id="testimonials">
+    <div class="container">
+        <div class="section-title">
+            <h2>Depoimentos</h2>
+            <p>O que meus clientes dizem sobre meu trabalho</p>
+        </div>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Cliente 1">
+                <div class="testimonial-content">
+                    <p>"Fawzi transformou completamente nosso e-commerce. O design intuitivo que ele criou aumentou nossas conversões em 40%. Profissionalismo e criatividade excepcionais!"</p>
+                    <div class="author">Maria Silva - CEO da FashionStore</div>
+                </div>
+            </div>
+        </div>
+        <div class="dots">
+            <span class="active" data-index="0"></span>
+            <span data-index="1"></span>
+            <span data-index="2"></span>
+        </div>
+    </div>
+</section> -->
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Vamos Trabalhar Juntos</h2>
+                <p>Pronto para transformar suas ideias em realidade? Entre em contacto!</p>
+            </div>
+            <div>
+                <h1> Cotacte-me pelos seguintes canais:</h1>
+                <ul class="about-details">
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <strong>Email:</strong>
+                        <a href="mailto:ivaniapercechirindza@email.com">
+                            ivaniapercechirindza@email.com
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <strong>Telefone:</strong>
+                        <a href="tel:+258833858115">+258 83 385 8115</a>
+                    </li>
+                    <!-- <li>
+                        <i class="fas fa-phone"></i>
+                        <strong>Telefone:</strong>
+                        <a href="tel:+258874870677">+258 87 487 0677</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <a href="#">Home</a>
+                <a href="#about">Sobre mim</a>
+                <a href="#services">Serviços</a>
+                <a href="#projects">Projectos</a>
+                <a href="#resume">Resumo</a>
+                <a href="#testimonials">Depoimentos</a>
+                <a href="#contact">Contacto</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <p>&copy; 2025 @KomekeHub. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+
+
+    <!-- Botão do WhatsApp flutuante -->
+    <!-- <a href="https://wa.me/258874870677" class="whatsapp-float" target="_blank" aria-label="Contactar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a> -->
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script>
+    async function baixarCV() {
+      // Carrega o conteúdo do cv.html
+      const response = await fetch('cv.html');
+      const html = await response.text();
+
+      // Cria um container temporário e insere no DOM
+      const container = document.createElement('div');
+      container.innerHTML = html;
+      document.body.appendChild(container); // necessário para que estilos sejam aplicados
+
+      // Gera o PDF
+      html2pdf().set({
+        margin: 0.5,
+        filename: 'CV-IvaniaPerce.pdf',
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+      }).from(container).save().then(() => {
+        container.remove(); // Remove do DOM após geração
+      });
+    }
+  </script>
+</body>
+</body>
+
+</html>
