@@ -100,6 +100,14 @@ resumeTabs.forEach(tab => {
 
 // habilidades
 
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggleBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+
+
 const ctx = document.getElementById('skillsRadar').getContext('2d');
 const skillsRadar = new Chart(ctx, {
   type: 'radar',

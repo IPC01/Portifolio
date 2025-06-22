@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -20,7 +20,13 @@
     <!-- Header -->
     <header>
         <div class="container navbar">
-            <div class="logo">IVÂNIA<span style="color:#ff8c42">.</span></div>
+            <div class="navmin">
+                <div class="logo">IPC01<span style="color:#ff8c42">.</span></div>
+
+                <button class="menu-toggle" aria-label="Abrir menu">&#9776;</button>
+            </div>
+
+
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#about">Sobre mim</a></li>
@@ -30,9 +36,11 @@
                 <!-- <li><a href="#testimonials">Depoimentos</a></li> -->
                 <li><a href="#contact">Contacto</a></li>
             </ul>
+
             <button class="btn-cv" id="downloadBtn" onclick="baixarCV()">Baixar CV</button>
         </div>
     </header>
+
     <!-- Barra de Progresso de Rolagem -->
     <div id="scrollProgressBar"></div>
 
@@ -114,15 +122,7 @@
                     <p style="color: rgb(100, 99, 99);">Criação e manutenção de sistemas e aplicações eficientes.</p>
                 </div>
 
-                <div class="service-card animate-up"
-                    style="flex: 1 1 250px; max-width: 300px; padding: 1.5rem; border-radius: 12px; box-shadow: 0 6px 18px rgba(239, 165, 55, 0.371); text-align: center; background-color: #f9f9f9; color: rgb(95, 63, 4);">
-                    <div class="icon" style="font-size: 2.5rem; color: #ff8c42; margin-bottom: 1rem;">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <h3>Professora</h3>
-                    <p style="color: rgb(100, 99, 99);">Actuação em ensino e monitoria para formação de novos talentos.
-                    </p>
-                </div>
+           
 
                 <div class="service-card animate-down"
                     style="flex: 1 1 250px; max-width: 300px; padding: 1.5rem; border-radius: 12px; box-shadow:  0 6px 18px rgba(239, 165, 55, 0.371);text-align: center; background-color: #f9f9f9;  color: rgb(95, 63, 4)">
@@ -169,24 +169,21 @@
             </div>
             <div class="projects-grid">
                 <div class="project-card" data-category="web">
-                    <img src="sga.jpg"
-                        alt="Project 1">
+                    <img src="sga.jpg" alt="Project 1">
                     <div class="info">
                         <span>SGA</span>
                         <h3>Sistema De Gestão De Actividades</h3>
                     </div>
                 </div>
                 <div class="project-card" data-category="web">
-                    <img src="eventconnect2.png"
-                        alt="Project 2">
+                    <img src="eventconnect2.png" alt="Project 2">
                     <div class="info">
                         <span>Event Connect</span>
                         <h3>Sistema De Busca e Reserva De Salões De Eventos</h3>
                     </div>
                 </div>
                 <div class="project-card" data-category="app">
-                    <img src="singularity.png"
-                        alt="Project 3">
+                    <img src="singularity.png" alt="Project 3">
                     <div class="info">
                         <span>Singularity</span>
                         <h3>Sistema De Gestão e Busca De Vagas De Emprego</h3>
@@ -402,18 +399,19 @@
                         Laravel, React, Vue.js, Node.js e muito mais para entregar soluções funcionais e intuitivas.
                     </p>
                 </div>
-                <div id="design" class="tab-pane">
-                    <div class="rn-pricing">
-                        <h2>Administração de BD</h2>
-                        <p>
-                            Gestão eficiente de bancos de dados relacionais (MySQL, Oracle) com foco em integridade,
-                            segurança e performance.
-                            Realizo modelagem, manutenção, backups, consultas otimizadas e boas práticas para garantir a
-                            estabilidade das suas informações.
-                        </p>
-                    </div>
+            </div>
+            <div id="design" class="tab-pane">
+                <div class="rn-pricing">
+                    <h2>Administração de BD</h2>
+                    <p>
+                        Gestão eficiente de bancos de dados relacionais (MySQL, Oracle) com foco em integridade,
+                        segurança e performance.
+                        Realizo modelagem, manutenção, backups, consultas otimizadas e boas práticas para garantir a
+                        estabilidade das suas informações.
+                    </p>
                 </div>
             </div>
+
     </section>
 
     <!-- Testimonials -->
@@ -503,27 +501,44 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
     <script>
-    async function baixarCV() {
-      // Carrega o conteúdo do cv.html
-      const response = await fetch('cv.html');
-      const html = await response.text();
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
 
-      // Cria um container temporário e insere no DOM
-      const container = document.createElement('div');
-      container.innerHTML = html;
-      document.body.appendChild(container); // necessário para que estilos sejam aplicados
+            menuToggle.addEventListener('click', function () {
+                navLinks.classList.toggle('active');
+            });
 
-      // Gera o PDF
-      html2pdf().set({
-        margin: 0.5,
-        filename: 'CV-IvaniaPerce.pdf',
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
-      }).from(container).save().then(() => {
-        container.remove(); // Remove do DOM após geração
-      });
-    }
-  </script>
+            // Fechar o menu quando um link for clicado (opcional)
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function () {
+                    navLinks.classList.remove('active');
+                });
+            });
+        });
+
+
+        async function baixarCV() {
+            // Carrega o conteúdo do cv.html
+            const response = await fetch('cv.html');
+            const html = await response.text();
+
+            // Cria um container temporário e insere no DOM
+            const container = document.createElement('div');
+            container.innerHTML = html;
+            document.body.appendChild(container); // necessário para que estilos sejam aplicados
+
+            // Gera o PDF
+            html2pdf().set({
+                margin: 0.5,
+                filename: 'CV-IvaniaPerce.pdf',
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
+            }).from(container).save().then(() => {
+                container.remove(); // Remove do DOM após geração
+            });
+        }
+    </script>
 </body>
 </body>
 
