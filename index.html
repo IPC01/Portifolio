@@ -48,7 +48,7 @@
     <section class="container hero">
         <div class="hero-info">
             <h2>Olá, Eu sou <span style="color:#ff8c42">Ivânia Perce Chirindza</span></h2>
-            <h1>Estudante de Licenciatura em Informática</h1>
+            <h1>Licenciada em Informática</h1>
             <p><span id="typed-hero"></span></p>
 
             <a class="btn-hire" href="#contact">Me Contacte</a>
@@ -122,7 +122,7 @@
                     <p style="color: rgb(100, 99, 99);">Criação e manutenção de sistemas e aplicações eficientes.</p>
                 </div>
 
-           
+
 
                 <div class="service-card animate-down"
                     style="flex: 1 1 250px; max-width: 300px; padding: 1.5rem; border-radius: 12px; box-shadow:  0 6px 18px rgba(239, 165, 55, 0.371);text-align: center; background-color: #f9f9f9;  color: rgb(95, 63, 4)">
@@ -234,7 +234,7 @@
                                                                     (Conclusão prevista: 2025)</span>
                                                             </div>
                                                         </div>
-                                                        <p>Estudante finalista da Licenciatura em Informática com
+                                                        <p>Licenciada em Informática com
                                                             formação em desenvolvimento de software, banco de dados e
                                                             engenharia de sistemas.</p>
                                                     </div>
@@ -523,21 +523,22 @@
             const response = await fetch('cv.html');
             const html = await response.text();
 
-            // Cria um container temporário e insere no DOM
+            // Cria um container temporário
             const container = document.createElement('div');
             container.innerHTML = html;
-            document.body.appendChild(container); // necessário para que estilos sejam aplicados
+            document.body.appendChild(container);
 
             // Gera o PDF
             html2pdf().set({
                 margin: 0.5,
-                filename: 'CV-IvaniaPerce.pdf',
+                filename: 'CV_Ivania_Perce_Chirindza.pdf',
                 html2canvas: { scale: 2 },
                 jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
             }).from(container).save().then(() => {
-                container.remove(); // Remove do DOM após geração
+                container.remove();
             });
         }
+
     </script>
 </body>
 </body>
